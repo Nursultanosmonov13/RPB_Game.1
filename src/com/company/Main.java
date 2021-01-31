@@ -1,7 +1,7 @@
 package com.company;
 
 import java.util.Random;
-
+//для теста
 public class Main {
     public static int[] heroesHealth = {270, 280, 250, 500, 500, 230}; //Жизнь героев
     public static int[] heroesDamage = {20, 15, 25, 0, 5, 10}; //Удар героев
