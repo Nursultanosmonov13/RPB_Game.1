@@ -23,11 +23,10 @@ public class Main {
     public static void round() {
         roundNumber++;
         bossDefenceType = changeBossDefence();
+        bossHits();
         System.out.println("___________________");
         System.out.println("Boss choose " + bossDefenceType);
         System.out.println("___________________");
-
-        bossHits();
         heroesHits();
         medicToHelp();
         printStatistcs();
@@ -59,8 +58,17 @@ public class Main {
     }
 
     public static void bossHits() { // Босс атакует
+        Random randomtr = new Random();
+        int srtq = randomtr.nextInt(5);
+        if (srtq == 1) {
+            bossHDamage = 0;
+            System.out.println("______________________");
+            System.out.println("Thor attacks");
+        } else {
+            bossHDamage = 50;
+        }
         Random random = new Random();
-        int a = random.nextInt(2);
+        int a = random.nextInt(3);
         //System.out.println("test - " + a);
         for (int i = 0; i < heroesHealth.length; i++) {
             if (heroesHealth[i] > 0 && bossHealth > 0) {
